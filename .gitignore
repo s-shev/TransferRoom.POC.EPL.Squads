@@ -546,3 +546,8 @@ dist
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+
+*.db-shm
+*.db-wal
+*.db-journal
