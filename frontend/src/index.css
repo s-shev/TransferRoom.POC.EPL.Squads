@@ -1,0 +1,14 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+div[id="root"] {
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100%;
+}
