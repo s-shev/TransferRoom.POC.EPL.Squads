@@ -1,0 +1,14 @@
+{
+  "name": "epl-data-seeder",
+  "version": "1.0.0",
+  "type": "module",
+  "author": "",
+  "scripts": {
+    "seed": "node ./src/data-seeder.js"
+  },
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "better-sqlite3": "^12.0.0"
+  }
+}
