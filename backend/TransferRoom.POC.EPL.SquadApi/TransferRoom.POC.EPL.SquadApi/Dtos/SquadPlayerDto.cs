@@ -1,4 +1,6 @@
-﻿namespace TransferRoom.POC.EPL.SquadApi.Dtos
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TransferRoom.POC.EPL.SquadApi.Dtos
 {
     /// <summary>
     /// Squad player model
@@ -12,11 +14,13 @@
         /// <summary>
         /// First name.
         /// </summary>
-        public string FirstName { get; set; }
+        [Required(AllowEmptyStrings = true)]
+        public string FirstName { get; set; } = null!;
         /// <summary>
         /// Last name
         /// </summary>
-        public string LastName { get; set; }
+        [Required(AllowEmptyStrings = true)] 
+        public string LastName { get; set; } = null!;
         /// <summary>
         /// Date of birth (if known)
         /// </summary>
@@ -24,15 +28,18 @@
         /// <summary>
         /// Position: G - Goalkeeper, D - defender, M - Midfielder, F - Forward
         /// </summary>
-        public string Position { get; set; }
+        [Required] 
+        public string Position { get; set; } = null!;
         /// <summary>
         /// National team.
         /// </summary>
-        public string NationalTeam { get; set; }
+        [Required(AllowEmptyStrings = true)]
+        public string NationalTeam { get; set; } = null!;
         /// <summary>
         /// Player photo url.
         /// </summary>
-        public string PhotoUrl { get; set; }
+        [Required] 
+        public string PhotoUrl { get; set; } = null!;
         /// <summary>
         /// Player shirt number
         /// </summary>

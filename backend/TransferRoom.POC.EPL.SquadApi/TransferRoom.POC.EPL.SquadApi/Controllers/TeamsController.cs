@@ -8,7 +8,7 @@ namespace TransferRoom.POC.EPL.SquadApi.Controllers
 {
 
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/teams")]
     public class TeamsController : ControllerBase
     {
         private readonly AppDbContext _context;

@@ -1,4 +1,6 @@
-﻿namespace TransferRoom.POC.EPL.SquadApi.Dtos
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TransferRoom.POC.EPL.SquadApi.Dtos
 {
     /// <summary>
     /// Team model
@@ -12,14 +14,16 @@
         /// <summary>
         /// Team name.
         /// </summary>
-        public string Name { get; set; }
+        [Required]
+        public string Name { get; set; } = null!;
         /// <summary>
         /// Team logo url.
         /// </summary>
-        public string LogoUrl { get; set; }
+        [Required]
+        public string LogoUrl { get; set; } = null!;
         /// <summary>
         /// A collection of team nicknames.
         /// </summary>
-        public List<string> Nicknames { get; set; }
+        public List<string>? Nicknames { get; set; }
     }
 }
