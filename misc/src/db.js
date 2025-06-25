@@ -5,7 +5,7 @@ import Database from "better-sqlite3";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const dbPath = path.resolve(
   __dirname,
-  "../../backend/TransferRoom.POC.EPL.SquadApi/TransferRoom.POC.EPL.SquadApi/epl_24_25.db"
+  "../../backend/TransferRoom.POC.EPL.SquadApi/epl_24_25.db"
 );
 
 export const db = new Database(dbPath);
