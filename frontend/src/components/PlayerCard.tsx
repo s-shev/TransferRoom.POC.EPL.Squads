@@ -43,7 +43,7 @@ export function PlayerCard({
           onError={() => setImgSrc("/no-photo.png")}
         />
 
-        <CardContent sx={{ p: 0, alignSelf: "start" }}>
+        <CardContent sx={{ p: 0, alignSelf: "start", flex: 1 }}>
           <Typography variant="subtitle1" fontWeight="bold">
             {player.firstName} {player.lastName}
           </Typography>
