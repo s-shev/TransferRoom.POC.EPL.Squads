@@ -42,6 +42,16 @@ namespace TransferRoom.POC.EPL.SquadApi
 
             builder.Services.AddAutoMapper(typeof(MappingProfile));
 
+#if RELEASE
+            // Requirement for deploying on Render: https://render.com/docs/web-services#port-binding
+
+            var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+            builder.WebHost.ConfigureKestrel(options =>
+            {
+                options.ListenAnyIP(int.Parse(port));
+            });
+#endif
+
             var app = builder.Build();
 
             // Use CORS policy
