@@ -69,6 +69,7 @@ namespace TransferRoom.POC.EPL.SquadApi
             app.UseAuthorization();
 
             app.MapControllers();
+            app.MapGet("/health-check", () => Results.Ok("Healthy")); // for render.com health-checks
 
             app.Run();
         }
