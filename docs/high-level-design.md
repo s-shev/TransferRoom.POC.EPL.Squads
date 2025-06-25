@@ -12,17 +12,17 @@ This document describes the high-level design for a proof-of-concept (POC) web a
 
 ## 2. Requirements Mapping
 
-| Requirement                                 | Solution Implementation                        |
-| ------------------------------------------- | ---------------------------------------------- |
-| Web-based app for EPL squad info            | React frontend + ASP.NET Core backend          |
-| Query by team name or nickname              | Search supports both club names and nicknames  |
-| Return profile picture, name, DOB, position | API and UI display all required player details |
-| React frontend                              | Implemented with React + TypeScript            |
-| C# middleware                               | Implemented with ASP.NET Core Web API          |
-| CI/CD deployment                            | Automated deployment via Render.com            |
-| 3rd party API integration                   | Data sourced from footballapi.pulselive.com    |
-| Public GitHub repo with documentation       | All code and docs in public repo               |
-| High-level design document                  | This document                                  |
+| Requirement                                       | Solution Implementation                        |
+| ------------------------------------------------- | ---------------------------------------------- |
+| Web-based app for EPL squad info                  | React frontend + ASP.NET Core backend          |
+| Query by team name or nickname                    | Search supports both club names and nicknames  |
+| Return profile picture, name, birthdate, position | API and UI display all required player details |
+| React frontend                                    | Implemented with React + TypeScript            |
+| C# middleware                                     | Implemented with ASP.NET Core Web API          |
+| CI/CD deployment                                  | Automated deployment via Render.com            |
+| 3rd party API integration                         | Data sourced from footballapi.pulselive.com    |
+| Public GitHub repo with documentation             | All code and docs in public repo               |
+| High-level design document                        | This document                                  |
 
 ---
 
@@ -93,7 +93,7 @@ This document describes the high-level design for a proof-of-concept (POC) web a
   - Demo: [https://epl-squads-24-25-poc.onrender.com/](https://epl-squads-24-25-poc.onrender.com/)
 
 - **Note:**
-  - Free plan may cause backend to "sleep" when idle; first API call may be slow or time out.
+  - Free plan may cause backend to "sleep" when idle; first API call may be slow or fail due to time out.
 
 ---
 
@@ -102,7 +102,6 @@ This document describes the high-level design for a proof-of-concept (POC) web a
 - **3rd Party API Limitations:**
 
   - Unofficial API may change or become unavailable.
-  - Data mapping and normalization required for consistency.
 
 - **Free Hosting Cold Starts:**
 
