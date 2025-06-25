@@ -27,6 +27,8 @@ export function Home() {
             minHeight: "90px",
             maxHeight: "200px",
             height: "calc(100% - 560px)",
+            display: "flex",
+            justifyContent: "center",
           }}
         >
           <img
