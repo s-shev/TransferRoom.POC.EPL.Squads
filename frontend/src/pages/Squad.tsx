@@ -9,7 +9,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { ArrowBack } from "@mui/icons-material";
+import ArrowBack from "@mui/icons-material/ArrowBack";
 import { PlayersList } from "../components/PlayersList";
 
 export function Squad() {

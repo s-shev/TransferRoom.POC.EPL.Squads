@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Container, Stack, Typography } from "@mui/material";
-import { SearchOff } from "@mui/icons-material";
+import SearchOff from "@mui/icons-material/SearchOff";
 import { TeamsList } from "../components/TeamsList";
 import { SearchBar } from "../components/SearchBar";
 import { useTeams } from "../contexts/TeamsContext";
