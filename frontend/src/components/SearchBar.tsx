@@ -1,18 +1,22 @@
 import { Button, Stack, TextField } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createSearchParams, Link, useSearchParams } from "react-router-dom";
 
 export function SearchBar() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [searchText, setSearchText] = useState(
-    searchParams.get("search") ?? undefined
-  );
+  const search = searchParams.get("search") ?? "";
+  const [searchText, setSearchText] = useState(search);
+
+  useEffect(() => {
+    setSearchText(search);
+  }, [search]);
 
   return (
     <Stack
       direction="row"
       gap={2}
       sx={{
+        width: "100%",
         position: "sticky",
         top: 0,
         p: 1,

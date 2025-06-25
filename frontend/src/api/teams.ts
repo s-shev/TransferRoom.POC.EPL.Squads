@@ -8,12 +8,14 @@ export type Team = {
   nicknames: string[];
 };
 
+export type Position = "G" | "D" | "M" | "F";
+
 export type Player = {
   id: number;
   firstName: string;
   lastName: string;
   dateOfBirth: string | null;
-  position: string;
+  position: Position;
   nationalTeam: string;
   photoUrl: string;
   shirtNumber: number | null;
