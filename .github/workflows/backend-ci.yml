@@ -25,3 +25,12 @@ jobs:
 
       - name: Build
         run: dotnet build ./backend/TransferRoom.POC.EPL.SquadApi.sln --no-restore --configuration Release
+
+      - name: Publish
+        run: dotnet publish ./backend/TransferRoom.POC.EPL.SquadApi.sln --configuration Release --output ./backend/publish
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: backend-publish
+          path: ./backend/publish
