@@ -33,6 +33,7 @@ This project is a proof of concept for managing and displaying English Premier L
 This solution is configured for CI/CD deployment with [Render.com](https://render.com/).  
 You can view the live demo site here: [https://epl-squads-24-25-poc.onrender.com/](https://epl-squads-24-25-poc.onrender.com/)
 
+> **Note:** The demo is hosted on Render.com's free plan. The backend API may "sleep" when not in use, so the first API call after a period of inactivity can take up to 50 seconds or may even time out. If this happens, simply refresh or retry after a short wait.
 ---
 
 ## Getting Started
